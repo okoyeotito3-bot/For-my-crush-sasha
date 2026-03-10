@@ -3,62 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy International Women's Day Sasha</title>
+
+<title>For Tonia ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 
 body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(pink, white);
-    text-align:center;
+margin:0;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+text-align:center;
+overflow-x:hidden;
 }
 
 .container{
-    padding:40px;
+max-width:900px;
+margin:auto;
+padding:40px 20px;
 }
 
 h1{
-    color:#d63384;
-    font-size:40px;
+font-family:'Dancing Script',cursive;
+font-size:55px;
+color:#b30059;
 }
 
-.photo{
-    margin-top:20px;
+.photos{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:25px;
 }
 
-.photo img{
-    width:220px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+.photos img{
+width:250px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,0.3);
 }
 
-.message{
-    margin-top:30px;
-    font-size:20px;
-    color:#333;
-    line-height:1.6;
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+line-height:1.8;
+font-size:18px;
 }
 
-.footer{
-    margin-top:50px;
-    font-size:22px;
-    color:#d63384;
-    font-weight:bold;
+.question{
+font-family:'Dancing Script',cursive;
+font-size:38px;
+color:#cc0066;
+margin-top:20px;
+}
+
+.buttons{
+margin-top:25px;
 }
 
 button{
-    margin-top:30px;
-    padding:12px 25px;
-    border:none;
-    border-radius:10px;
-    background:#d63384;
-    color:white;
-    font-size:16px;
+padding:12px 30px;
+font-size:18px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+margin:10px;
+transition:0.3s;
+}
+
+.yes{
+background:#ff4d6d;
+color:white;
+}
+
+.no{
+background:#555;
+color:white;
 }
 
 button:hover{
-    background:#b0256b;
+transform:scale(1.1);
+}
+
+#result{
+margin-top:30px;
+font-size:40px;
+}
+
+/* hearts floating */
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:20px;
+animation:float 8s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+100%{transform:translateY(-100vh)}
+}
+
+/* butterflies */
+
+.butterfly{
+position:fixed;
+bottom:-30px;
+font-size:25px;
+animation:fly 10s linear infinite;
+}
+
+@keyframes fly{
+0%{
+transform:translateY(0) translateX(0);
+}
+100%{
+transform:translateY(-100vh) translateX(100px);
+}
+}
+
+footer{
+margin-top:40px;
+font-style:italic;
 }
 
 </style>
@@ -66,41 +135,109 @@ button:hover{
 
 <body>
 
+<!-- floating hearts -->
+<div class="heart" style="left:10%">❤️</div>
+<div class="heart" style="left:30%;animation-delay:2s">❤️</div>
+<div class="heart" style="left:50%;animation-delay:4s">❤️</div>
+<div class="heart" style="left:70%;animation-delay:1s">❤️</div>
+<div class="heart" style="left:90%;animation-delay:3s">❤️</div>
+
 <div class="container">
 
-<h1>🌸 Happy International Women's Day 🌸</h1>
+<h1>Dear Tonia ❤️</h1>
 
-<h2>Sasha</h2>
+<div class="photos">
 
-<div class="photo">
-<img src="https://i.postimg.cc/gkv34NVS/IMG-20260305-WA0015.jpg">
+<img src="https://i.postimg.cc/hPZkVk9Z/Screenshot-2026-03-10-15-36-55-43-6012fa4d4ddec268fc5c7112cbb265e7-(1).jpg">
+
+<img src="https://i.postimg.cc/7YN15z2q/file-00000000e284722f82750d75f631eb92-(1).png">
+
 </div>
 
-<div class="message">
+<div class="card">
+
 <p>
-Today is a special day to celebrate amazing women around the world,
-and I just wanted to say you are truly wonderful.
+From the first day I met you at your working place, Winter Gold,
+something about you stayed in my mind.
 </p>
 
 <p>
-Your kindness, beauty, and personality make you stand out.
-Keep being the amazing person you are.
+Since then I realized my feelings for you have stayed the same.
 </p>
 
 <p>
-Happy International Women's Day Sasha 💐
+I'm still learning web development, so I made this small website
+just for you.
 </p>
+
+<p>
+And please don't mind silly me imagining you in my head
+and creating a photo of you there.
+</p>
+
+<p>
+But the truth is simple… I really like you.
+</p>
+
+<div class="question">
+Will you be my girlfriend? ❤️
 </div>
 
-<button onclick="alert('You are amazing Sasha! Happy Women\'s Day! 🌸')">
-Click for a surprise
-</button>
+<div class="buttons">
 
-<div class="footer">
-With love from Otitochukwu ❤️
-</div>
+<button class="yes" onclick="yesAnswer()">YES ❤️</button>
+
+<button class="no" onclick="noAnswer()">NO 😔</button>
 
 </div>
+
+<div id="result"></div>
+
+<p style="margin-top:25px;font-style:italic;">
+I won't know which answer you choose here.
+So please come to my DM and tell me your answer. 🙂
+</p>
+
+</div>
+
+<footer>
+Sincerely,<br>
+Otitochukwu
+</footer>
+
+</div>
+
+<script>
+
+function yesAnswer(){
+
+document.getElementById("result").innerHTML="🦋 I'm smiling right now...";
+
+for(let i=0;i<12;i++){
+
+let b=document.createElement("div");
+
+b.className="butterfly";
+
+b.innerHTML="🦋";
+
+b.style.left=Math.random()*100+"%";
+
+b.style.animationDuration=(6+Math.random()*5)+"s";
+
+document.body.appendChild(b);
+
+}
+
+}
+
+function noAnswer(){
+
+document.getElementById("result").innerHTML="😢 It's okay... we can still be friends.";
+
+}
+
+</script>
 
 </body>
 </html>
