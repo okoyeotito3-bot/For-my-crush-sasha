@@ -1,243 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>For Tonia ❤️</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-
-<style>
-
-body{
-margin:0;
-font-family:'Poppins',sans-serif;
-background:linear-gradient(135deg,#ff9a9e,#fad0c4);
-text-align:center;
-overflow-x:hidden;
-}
-
-.container{
-max-width:900px;
-margin:auto;
-padding:40px 20px;
-}
-
-h1{
-font-family:'Dancing Script',cursive;
-font-size:55px;
-color:#b30059;
-}
-
-.photos{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-margin-bottom:25px;
-}
-
-.photos img{
-width:250px;
-border-radius:15px;
-box-shadow:0 10px 20px rgba(0,0,0,0.3);
-}
-
-.card{
-background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
-line-height:1.8;
-font-size:18px;
-}
-
-.question{
-font-family:'Dancing Script',cursive;
-font-size:38px;
-color:#cc0066;
-margin-top:20px;
-}
-
-.buttons{
-margin-top:25px;
-}
-
-button{
-padding:12px 30px;
-font-size:18px;
-border:none;
-border-radius:8px;
-cursor:pointer;
-margin:10px;
-transition:0.3s;
-}
-
-.yes{
-background:#ff4d6d;
-color:white;
-}
-
-.no{
-background:#555;
-color:white;
-}
-
-button:hover{
-transform:scale(1.1);
-}
-
-#result{
-margin-top:30px;
-font-size:40px;
-}
-
-/* hearts floating */
-
-.heart{
-position:fixed;
-bottom:-20px;
-font-size:20px;
-animation:float 8s linear infinite;
-}
-
-@keyframes float{
-0%{transform:translateY(0)}
-100%{transform:translateY(-100vh)}
-}
-
-/* butterflies */
-
-.butterfly{
-position:fixed;
-bottom:-30px;
-font-size:25px;
-animation:fly 10s linear infinite;
-}
-
-@keyframes fly{
-0%{
-transform:translateY(0) translateX(0);
-}
-100%{
-transform:translateY(-100vh) translateX(100px);
-}
-}
-
-footer{
-margin-top:40px;
-font-style:italic;
-}
-
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TikTok to Forever — Sasha & Otito</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #1a0033 0%, #4a0072 50%, #2d004d 100%);
+      color: #f0e6ff;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    header {
+      text-align: center;
+      padding: 70px 0 50px;
+      background: rgba(0,0,0,0.5);
+      border-radius: 0 0 40px 40px;
+      margin-bottom: 50px;
+    }
+    h1 {
+      font-size: 3.4rem;
+      background: linear-gradient(90deg, #ff9ff3, #f368e0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 14px;
+      text-shadow: 0 0 30px rgba(243,104,224,0.5);
+    }
+    .subtitle {
+      font-size: 1.35rem;
+      color: #d1b3ff;
+      opacity: 0.95;
+    }
+    .chapter {
+      margin: 70px 0;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    .chapter.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .chapter h2 {
+      font-size: 2.3rem;
+      color: #ff9ff3;
+      margin-bottom: 28px;
+      border-left: 7px solid #f368e0;
+      padding-left: 22px;
+      letter-spacing: -0.5px;
+    }
+    .text {
+      font-size: 1.18rem;
+      color: #e6d9ff;
+      background: rgba(40, 10, 70, 0.55);
+      padding: 32px 36px;
+      border-radius: 20px;
+      border: 1px solid rgba(243,104,224,0.25);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    }
+    .highlight {
+      color: #ff9ff3;
+      font-weight: 700;
+    }
+    .ending {
+      text-align: center;
+      font-size: 1.55rem;
+      color: #ffe6f0;
+      margin: 90px 0 60px;
+      font-style: italic;
+      line-height: 1.9;
+    }
+    .heart {
+      color: #ff6bcb;
+      font-size: 1.8em;
+      animation: pulse 2.2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.25); }
+    }
+    .credits {
+      text-align: center;
+      font-size: 0.98rem;
+      color: #b39cff;
+      margin: 110px 0 50px;
+    }
+    @media (max-width: 620px) {
+      h1 { font-size: 2.7rem; }
+      .chapter h2 { font-size: 1.9rem; }
+      .text { font-size: 1.07rem; padding: 24px; }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- floating hearts -->
-<div class="heart" style="left:10%">❤️</div>
-<div class="heart" style="left:30%;animation-delay:2s">❤️</div>
-<div class="heart" style="left:50%;animation-delay:4s">❤️</div>
-<div class="heart" style="left:70%;animation-delay:1s">❤️</div>
-<div class="heart" style="left:90%;animation-delay:3s">❤️</div>
+  <header>
+    <h1>TikTok to Forever</h1>
+    <p class="subtitle">From late-night scrolls to wedding rings and baby giggles</p>
+  </header>
 
-<div class="container">
+  <div class="container">
 
-<h1>Dear Tonia ❤️</h1>
+    <div class="chapter">
+      <h2>1. The First Duet</h2>
+      <div class="text">
+        It started on TikTok. Sasha, a fresh graduate from Benin City (Edo State), was living in Ibadan, scrolling endlessly while job-hunting. She posted a funny dance to a trending Amapiano sound. Otito, a final-year tech student and web developer from Anambra, living in Awka, saw it and dueted her with his own smooth coding-transition effect.<br><br>
+        Comments exploded. Sasha laughed at his reply and slid into his DMs: “Bro your transition too clean! How you code like that?”<br><br>
+        Otito replied instantly: “Lol, years of practice. You from Benin? Your energy mad.”<br><br>
+        That single message opened the floodgates. Numbers exchanged. WhatsApp became their world.
+      </div>
+    </div>
 
-<div class="photos">
+    <div class="chapter">
+      <h2>2. One Year of Magic</h2>
+      <div class="text">
+        For twelve full months they talked every single day. Morning voice notes from Otito while debugging code, late-night calls from Sasha while dropping CVs in Ibadan. He taught her basic HTML; she sent him Benin food recipes. He called her “my Edo queen.” She called him “my Anambra genius.”<br><br>
+        They never met in person yet, but the bond grew deeper than most physical relationships. Sasha would cry after failed interviews and Otito would stay on call till she smiled again. He built her a simple portfolio website for free. She surprised him with a custom ringtone of her singing his name.<br><br>
+        Distance made everything sweeter. They planned their first meeting like a wedding.
+      </div>
+    </div>
 
-<img src="https://i.postimg.cc/hPZkVk9Z/Screenshot-2026-03-10-15-36-55-43-6012fa4d4ddec268fc5c7112cbb265e7-(1).jpg">
+    <div class="chapter">
+      <h2>3. The Day They Finally Met</h2>
+      <div class="text">
+        After exactly one year, Otito booked a bus to Ibadan. Sasha waited at the park in a flowing Ankara gown, heart hammering. When he stepped down — tall, dark, fresh low-cut, laptop bag slung over shoulder — their eyes locked and time stopped.<br><br>
+        He hugged her so tight she could feel his heartbeat. “Sasha… finally.”<br><br>
+        They spent the whole day exploring Ibadan — UI gate, cocoa house, street suya. Laughter never stopped. But the real fire started when night fell and he checked into a modest hotel near her area.
+      </div>
+    </div>
 
-<img src="https://i.postimg.cc/7YN15z2q/file-00000000e284722f82750d75f631eb92-(1).png">
+    <div class="chapter">
+      <h2>4. That Raw First Night (The Shower)</h2>
+      <div class="text">
+        After dinner they showered together. The warm water cascaded over their bodies like a blessing. Sasha, completely naked for the first time in front of him, felt bold. She reached down and wrapped her soft hand around his already hard dick, stroking slowly, feeling it throb and grow thicker in her palm.<br><br>
+        “You’re so big…” she whispered, eyes locked on his. Otito groaned, head tilting back under the spray.<br><br>
+        He cupped her full breasts, lifted one to his mouth and sucked hard — tongue swirling around her dark nipple, teeth grazing gently, then sucking deeper until she moaned loudly. Water mixed with her whimpers.<br><br>
+        “I’ve wanted this for a whole year,” he growled.<br><br>
+        He turned her around, pressed her against the wet tiled wall. Sasha arched her back. Otito held his dick, rubbed the thick head against her wet entrance, then pushed in slowly — inch by inch — stretching her until he was buried to the hilt. She gasped “Oh my God…”<br><br>
+        He started fucking her deep and raw right there in the shower. Hard thrusts, skin slapping wetly, water splashing everywhere. One hand gripped her waist, the other reached around to rub her clit. Sasha screamed his name as she came hard, legs shaking. He kept pounding until he exploded inside her, groaning “Sasha… fuck!” as hot spurts filled her.<br><br>
+        They collapsed against each other, kissing under the running water, hearts racing. That night changed everything.
+      </div>
+    </div>
 
-</div>
+    <div class="chapter">
+      <h2>5. Back Home & Obsession</h2>
+      <div class="text">
+        Sasha returned to her room in Ibadan the next morning. She couldn’t stop thinking about that shower. Every shower she took, she replayed it — the way his dick felt in her hand, how he sucked her breasts like he was starving, the raw power of him fucking her against the wall. She touched herself remembering his groans, whispering his name in the dark.<br><br>
+        Their calls became hotter. She told him she was addicted. He admitted the same. They planned her next visit to Awka in two months.
+      </div>
+    </div>
 
-<div class="card">
+    <div class="chapter">
+      <h2>6. The Heartbreak Visit</h2>
+      <div class="text">
+        Two months later Sasha surprised Otito in Awka. She arrived at his off-campus apartment unannounced, smiling with flowers.<br><br>
+        But when she opened the door with the spare key he gave her… she froze.<br><br>
+        Otito was on the couch laughing with a beautiful girl — both of them play-fighting roughly, tickling, the girl sitting on his lap. Sasha’s heart shattered. She dropped the flowers and ran.<br><br>
+        Otito chased after her shouting her name, but she jumped into a bike and disappeared into the night. Tears streamed down her face the entire ride back to the park.
+      </div>
+    </div>
 
-<p>
-From the first day I met you at your working place, Winter Gold,
-something about you stayed in my mind.
-</p>
+    <div class="chapter">
+      <h2>7. Silence & Pain</h2>
+      <div class="text">
+        Otito called and called. Sasha rejected every single call and blocked him on WhatsApp. She cried for days in Ibadan, job applications forgotten. “He played me after everything,” she whispered to her pillow.<br><br>
+        Weeks passed. She refused to listen to his voice notes. The pain was deeper than the pleasure had been.
+      </div>
+    </div>
 
-<p>
-Since then I realized my feelings for you have stayed the same.
-</p>
+    <div class="chapter">
+      <h2>8. The Long Journey to Ibadan</h2>
+      <div class="text">
+        One rainy evening, Sasha heard a knock on her door. She opened it — soaked from head to toe, eyes red — was Otito. He had taken the first bus from Awka without telling anyone.<br><br>
+        “Please… just five minutes. After that, if you still hate me, I’ll leave forever.”<br><br>
+        Something in his broken voice made her step aside. They sat on her small bed.
+      </div>
+    </div>
 
-<p>
-I'm still learning web development, so I made this small website
-just for you.
-</p>
+    <div class="chapter">
+      <h2>9. The Truth & Reconciliation</h2>
+      <div class="text">
+        “That girl you saw… is my cousin. Chioma. We grew up together. She came to surprise me because her mum was sick and she needed money for hospital. We always play rough like that — it’s how we’ve been since childhood. Nothing more.”<br><br>
+        He showed screenshots, family photos, even called Chioma on speaker so Sasha could hear her laugh and confirm: “Babe, I’m his blood cousin o! He only talks about you every second.”<br><br>
+        Otito dropped to his knees. “Sasha, I love only you. That year of talking, that night in the shower — you own my heart. No one else.”<br><br>
+        Tears fell from both of them. Sasha finally hugged him. They cried, kissed, made slow love that night — no shower this time, just deep, emotional connection that healed every wound.
+      </div>
+    </div>
 
-<p>
-And please don't mind silly me imagining you in my head
-and creating a photo of you there.
-</p>
+    <div class="chapter">
+      <h2>10. Forever Begins</h2>
+      <div class="text">
+        Six months later they got married in a beautiful traditional ceremony — Edo and Igbo colours blended perfectly. Sasha got a dream job in Ibadan through Otito’s connections. He finished his web dev course and started his own tech company.<br><br>
+        Two years after marriage, they welcomed their first child — a beautiful girl. Otito held her in his arms, tears in his eyes, and whispered: “Her name is Efebomwen… Sasha’s native name. Because everything beautiful in my life started with you.”<br><br>
+        Sasha smiled through happy tears. They looked at each other, leaned in, and kissed slowly while their baby cooed between them.
+      </div>
+    </div>
 
-<p>
-But the truth is simple… I really like you.
-</p>
+    <p class="ending">
+      From a TikTok duet to wedding rings.<br>
+      From a raw shower night to family laughter.<br>
+      From heartbreak to forever.<br><br>
+      Love doesn’t always come easy — but when it’s real, it always finds its way back home.<br>
+      <span class="heart">💕</span>
+    </p>
 
-<div class="question">
-Will you be my girlfriend? ❤️
-</div>
+    <p class="credits">
+      A true-love story • Written from the heart
+    </p>
 
-<div class="buttons">
+  </div>
 
-<button class="yes" onclick="yesAnswer()">YES ❤️</button>
+  <script>
+    const chapters = document.querySelectorAll('.chapter');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
 
-<button class="no" onclick="noAnswer()">NO 😔</button>
-
-</div>
-
-<div id="result"></div>
-
-<p style="margin-top:25px;font-style:italic;">
-I won't know which answer you choose here.
-So please come to my DM and tell me your answer. 🙂
-</p>
-
-</div>
-
-<footer>
-Sincerely,<br>
-Otitochukwu
-</footer>
-
-</div>
-
-<script>
-
-function yesAnswer(){
-
-document.getElementById("result").innerHTML="🦋 I'm smiling right now...";
-
-for(let i=0;i<12;i++){
-
-let b=document.createElement("div");
-
-b.className="butterfly";
-
-b.innerHTML="🦋";
-
-b.style.left=Math.random()*100+"%";
-
-b.style.animationDuration=(6+Math.random()*5)+"s";
-
-document.body.appendChild(b);
-
-}
-
-}
-
-function noAnswer(){
-
-document.getElementById("result").innerHTML="😢 It's okay... we can still be friends.";
-
-}
-
-</script>
+    chapters.forEach(ch => observer.observe(ch));
+  </script>
 
 </body>
 </html>
